@@ -1,0 +1,679 @@
+/* app.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans globally */
+    font-weight: 400; /* Default weight */
+}
+
+/* Optional: Set specific weights for different classes */
+.light {
+    font-weight: 300; /* Light weight */
+}
+
+.semibold {
+    font-weight: 600; /* SemiBold weight */
+}
+
+/* Style buttons and links if needed */
+button, a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Default weight for buttons and links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-content {
+    margin-bottom: 20px ; /* Align to the left with some margin */
+    padding-left:10px
+}
+
+.header-content h1 {
+    font-size: 2em; /* Larger font size for the title */
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.header-content p {
+    font-size: 1em; /* Slightly larger description */
+    margin-top: 0;
+}
+
+.main-body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-container {
+    width: 50%;
+    padding: 20px;
+}
+
+.right-container {
+    /* width: 50%; */
+    padding: 20px;
+}
+
+/* Key Features Section */
+.key-features {
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 0; /* Remove padding */
+    line-height: 1.6; /* Increase line height for readability */
+    font-size: 1.1em; /* Slightly larger font size for features */
+}
+
+.feature-list div {
+    display: flex;
+    margin-bottom: 2px;
+    align-items: baseline;
+}
+
+.icon-cont {
+    padding: 15px;
+    margin-right: 5px;
+}
+.key-features {
+
+  background-color: #fff; /* White background for each stat item */
+  border-radius: .25rem; /* Rounded corners for each item */
+  padding: 20px; /* Padding inside each item */
+  box-shadow: rgba(0,0,0,0.1) 0px .5rem .5rem;
+  
+}
+/* Data Input Section Styles */
+/* Data Input Section */
+.data-input {
+  background-color: #fff; /* White background for each stat item */
+  border-radius: .25rem; /* Rounded corners for each item */
+  padding: 20px; /* Padding inside each item */
+  box-shadow: rgba(0,0,0,0.1) 0px .5rem .5rem;
+}
+/* Section Title */
+.section-title {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+/* Input Options */
+.input-options {
+  display: flex;
+  /* justify-content: center; */
+  margin-bottom: .5em;
+  align-items: center;
+
+}
+
+.input-button {
+  /* flex-grow: 1; */
+  padding: .5em;
+  border-radius: .25rem;
+  border: none;
+  cursor: pointer;
+  background-color: #cbc7c7;
+  color: black;
+  transition: .3s ease-in-out;
+  width:50%;
+  height:3rem;
+  font-size: large;
+}
+
+.input-button.active {
+  background-color: #A10F07;
+  color:white
+}
+
+.input-button:hover:not(.active) {
+  background-color: #989393;
+}
+
+/* File Upload Section */
+.file-upload-container {
+  border-radius: .25rem;
+  border: dashed .125rem #CD1309;
+  padding: 1em;
+  text-align: center;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #666666;
+}
+
+.upload-icon {
+  height: 5em;
+  width: 5em;
+  color: #6f6c6c;
+  margin-bottom: .5em;
+}
+.upload-icon:hover{
+  color: #333333;
+}
+
+.supported-formats {
+  display: block;
+  font-size: .85em;
+  color: #999999;
+  margin-top:8px;
+  margin-bottom:10px
+}
+
+/* Uploaded File Info */
+.uploaded-file-info {
+  margin-top: .5em;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: .5em;
+  border-radius: .25rem;
+}
+
+.file-icon {
+  height: 1em;
+  width: 1em;
+  margin-right: .5em;
+}
+
+.clear-file-btn {
+  background: none;
+  border: none;
+  color: #CD1309;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Manual Entry Section */
+.manual-entry-container {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  width:97%
+}
+
+.textarea-input {
+  width: 100%;
+  height: 100px;
+  padding: .5em;
+  border-radius: .25rem;
+  border: .125rem solid #CD1309;
+  resize: none;
+}
+
+.textarea-input::placeholder {
+  color: #999999;
+}
+
+/* Manual Entry Buttons */
+.manual-entry-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clear-text-btn {
+  background: none;
+  border: .125rem solid #CD1309;
+  color: #CD1309;
+  padding: .5em;
+  border-radius: .25rem;
+  cursor: pointer;
+}
+
+.clear-text-btn:hover {
+  background: #CD1309;
+  color: white;
+}
+
+/* Process Data Button */
+.process-button {
+  background-color: #CD1309;
+  color: white;
+  padding: .5em 1em;
+  border: none;
+  border-radius: .25rem;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.process-button:hover {
+  background-color: #A10F07;
+}
+
+/* Right Container Styling */
+.right-container {
+  width: 50%;
+  padding: 20px;
+}
+
+/* Stats Section - 2x2 Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.stat-item {
+  background: #f8f8f8;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #CD1309;
+  margin-right:10px
+}
+
+.stat-description {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* How It Works Section */
+.how-it-works-container,.risk-factors-container {
+  margin-top: 20px;
+  background-color: #fff; /* White background for each stat item */
+  border-radius: .25rem; /* Rounded corners for each item */
+  padding: 20px; /* Padding inside each item */
+  box-shadow: rgba(0,0,0,0.1) 0px .5rem .5rem;
+}
+
+.steps-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.steps-list li {
+  counter-increment: step-counter;
+  padding: 20px;
+  position: relative;
+  font-size: 1.1em;
+  margin-left:35px;
+  display: flex
+;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.steps-list li::before {
+  content: counter(step-counter);
+  font-weight: bold;
+  position: absolute;
+  left: -25px;
+  background: #CD1309;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.steps-list div{
+  margin-left:10px
+}
+.steps-list2 {
+  list-style: none;
+  padding: 0;
+}
+.steps-list2 li::before {
+  display: none;
+}
+.steps-list2 li{
+  margin-left:-5px
+}
+
+/* Risk Factors Container Styles */
+.risk-factors-container {
+  background-color: #fff; /* White background for each stat item */
+  border-radius: .25rem; /* Rounded corners for each item */
+  padding: 20px; /* Padding inside each item */
+  box-shadow: rgba(0,0,0,0.1) 0px .5rem .5rem;
+  margin-bottom: 20px; /* Space below risk factors section */
+}
+
+/* Risk Factors List Styles */
+.risk-factors-list {
+  padding-left: 0; /* Remove padding */
+  display:flex;
+  flex-wrap:wrap;
+}
+
+/* Risk Factor Item Styles */
+.risk-factor-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Space between items */
+  margin-right:15px;
+  font-size: 1.1em;
+}
+
+/* Individual Line Styles */
+.risk-factor-line {
+  width: 4px; /* Width of the line */
+  height: 15px; /* Height of the line */
+  background-color: #CD1309; /* Color of the line */
+  margin-right: 10px; /* Space between line and text */
+  border-radius:5px
+}
+
+/* Risk Factor Text Styles */
+.risk-factor-item span {
+  font-size: 1em; /* Font size for risk factor text */
+}
+.stats-container {
+  margin-bottom: 20px; /* Space below stats section */
+  margin-top:20px
+}
+
+.stats-grid {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+  gap: 35px; /* Space between items */
+  justify-content: center;
+}
+
+.stat-item {
+  display: flex; /* Align icon and content horizontally */
+  align-items: center; /* Center items vertically */
+  background-color: #fff; /* White background for each stat item */
+  border-radius: .25rem; /* Rounded corners for each item */
+  padding: 20px; /* Padding inside each item */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px .2rem .2rem; /* Subtle shadow for depth */
+  width: calc(45%); 
+}
+
+.stat-icon {
+  margin-right: 15px; /* Space between icon and text */
+}
+
+.stat-content {
+  flex-grow: 1; /* Allow content to take up remaining space */
+  text-align: left;
+  margin-left:10px
+}
+
+.stat-number {
+  font-size: 1.8em; /* Larger font size for number */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.stat-description {
+  display: block; /* Make description block-level for spacing */
+  font-size: 1.1em; /* Normal font size for description */
+  font-weight: bold;
+}
+
+.stat-change {
+  display: block; /* Make change percentage block-level for spacing */
+  font-size: 1em; /* Smaller font size for percentage change */
+  color: #4CAF50; /* Green color for positive changes */
+  margin-top:5px
+}
+.stat-change2 {
+  display: block; /* Make change percentage block-level for spacing */
+  font-size: 1em; /* Smaller font size for percentage change */
+  color: #c73f2d; /* Green color for positive changes */
+  margin-top:5px
+}
+
+.cs{
+  display:flex;
+  width:100%
+}
+.left-conta{
+  width:50%
+}
+.right-conta{
+  width:50%
+}
+.risk-report .css-xijkab-MuiStepper-root, .stepss .css-xijkab-MuiStepper-root{
+  width:50% !important
+}
+.txid{
+  /* text-align: center; */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-size:1.5em;
+    display:flex;
+    justify-content: space-between;
+    width:50%
+}
+.prev{
+  margin-right: 20px;
+  padding:0;
+  height:2.5rem
+}
+.next{
+  height:2.5rem
+}
+.navigation-buttons button:disabled {
+  background-color: #cccccc; /* Greyed out */
+  color: #666666; /* Dimmed text */
+  cursor: not-allowed; /* Prevents clicking */
+  opacity: 0.6;
+}
+.cl{
+  display:flex;
+  width:70%;
+}
+.left-cont{
+  width:50%;
+}
+.right-cont{
+  width:50%
+}
+.stepper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width:100%;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5rem 0.5rem;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  padding:10px 0 10px 0
+}
+
+.step.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step.completed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.circle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  position: relative;
+}
+
+.outer-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid #CD1309; /* Outer border for the double-circle effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #CD1309;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step.completed .inner-circle {
+  background-color: #9E0E08; /* Darker shade for completed steps */
+}
+
+.line {
+  width: 3px;
+  height: 50px;
+  /* background-color: #ddd; */
+  position: absolute;
+  left: 43px; /* Align with the circles */
+  top: -10px; /* Connect to the previous step */
+  transition: background-color 1s ease-in-out, height 1s ease-in-out;
+}
+
+.active-line {
+  background-color: #CD1309; /* Animated progress effect */
+}
+.content{
+  margin-left:10px;
+}
+/* Risk Score Indicator */
+.risk-score-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.risk-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  background:lightblue;
+padding:5px 15px;
+border-radius:.5em;
+}
+.risk-level{
+  margin-bottom:15px;
+}
+
+.legend {
+  display:flex;
+  /* flex-direction: column; */
+  margin-top:10px;
+  justify-content: center;
+}
+.legend-color{
+width:10px;
+height:10px;
+margin-right:5px;
+}
+.legend-div{
+  display:flex;
+  align-items: center;
+  margin:10px
+}
+.text-group text{
+  fill:black !important;
+}  
+/* Confidence Score Bar */
+.confidence-score-container {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.progress-bar {
+  width: 60%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 6px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: .5em;
+  margin-bottom:1.5em
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+.accordion-container{
+  padding:20px;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.Mui-expanded.MuiAccordion-gutters.css-1808mag-MuiPaper-root-MuiAccordion-root{
+  border-radius:.25em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border:1px solid #CD1309
+}
+

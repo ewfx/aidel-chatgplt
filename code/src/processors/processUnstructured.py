@@ -13,7 +13,7 @@ def parse_unstructured_data(text: str) -> Dict[str, Optional[str]]:
     
     # Define regex patterns for extracting information
     patterns = {
-        "Transaction ID": r"Transaction ID:\s*(\S+)",
+        "Transaction ID": r"(?:Transaction ID|TID):\s*(\S+)",
         "Date": r"Date:\s*([\d\- :]+)",
         "Amount": r"Amount:\s*\$([\d,]+\.\d{2})",
         "Currency Exchange": r"Currency Exchange:\s*(.*)",
@@ -121,7 +121,7 @@ def process_unstructured_transactions(unstructured_data: List[str]) -> List[Dict
         # Construct the structured transaction record
         transaction_record = {
             "Raw Transaction": data.strip(),
-            "Transaction ID": parsed_data.get("Transaction ID", ""),
+            "Transaction ID": parsed_data.get("Transaction ID", parsed_data.get("TID", "")),
             "Date": parsed_data.get("Date", ""),
             "Amount": parsed_data.get("Amount", ""),
             "Currency Exchange": parsed_data.get("Currency Exchange", ""),
@@ -185,16 +185,4 @@ def process_unstructured_transactions(unstructured_data: List[str]) -> List[Dict
 def read_unstructured_file(file_path: str) -> List[str]:
     """Reads unstructured data from a text file."""
     with open(file_path, 'r', encoding='utf-8') as file:
-        return file.read().strip().split("\n---\n")  # Split by '---' delimiter
-
-if __name__ == "__main__":
-    input_file_path = 'data/transactions.txt'  # Path to your input .txt file
-    
-    # Read unstructured data from the file
-    unstructured_examples = read_unstructured_file(input_file_path)
-    
-    # Process the unstructured transactions
-    structured_transactions = process_unstructured_transactions(unstructured_examples)
-    
-    # Output processed transactions as JSON
-    print(json.dumps(structured_transactions, indent=2))
+        return file.read().strip().split("\n---\n")  # Split by '---' delimiter 

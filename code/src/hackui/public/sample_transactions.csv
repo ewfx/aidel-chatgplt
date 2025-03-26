@@ -1,0 +1,6 @@
+Transaction,Payer Name,Receiver Name,Transaction Details,Amount,Receiver Country
+TXN001,Acme Corp,SovCo Capital Partners,"Payment for services rendered","$500,000",USA
+TXN002,Global Health Foundation,Save the Children,"Grant disbursement","$2,000,000",UK
+TXN003,XYZ Ltd,ABC GmbH,"Purchase of office supplies","$15,000",Germany
+TXN004,Green Earth Org,CCMI,"Environmental project funding","$750,000","Cayman Islands"
+TXN005,Oceanic Holdings LLC,Alas Chiricanas,"Offshore investment","$5,000,000",Panama

@@ -225,21 +225,4 @@ def process_structured_transactions(csv_path: str) -> List[Dict]:
         return []
     except Exception as e:
         logger.error(f"Processing failed: {str(e)}")
-        return []
-
-
-if __name__ == "__main__":
-    input_path = os.path.join("data", "transactions.csv")
-    output_path = os.path.join(
-        "data", "processed_structured_transactions.json")
-
-    processed_data = process_structured_transactions(input_path)
-
-    if processed_data:
-        try:
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(processed_data, f, indent=2)
-        except IOError as e:
-            logger.error(f"Failed to write output: {str(e)}")
-    else:
-        logger.warning("No transactions processed - check input data")
+        return [] 

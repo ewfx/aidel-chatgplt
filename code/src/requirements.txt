@@ -1,6 +1,11 @@
-pandas
-spacy
-openai
-rapidfuzz
+pandas>=2.2.0
+spacy>=3.7.2
+openai>=1.12.0
+rapidfuzz>=3.6.1
 wikipedia==1.4.0
-# instructions - python -m spacy download en_core_web_lg - NER 
+Flask>=3.0.2
+Flask-CORS>=4.0.0
+python-dotenv>=1.0.1
+google-generativeai>=0.3.2
+groq
+jsonmerge

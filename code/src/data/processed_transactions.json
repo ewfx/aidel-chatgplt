@@ -1,0 +1,116 @@
+[
+  {
+    "Raw Transaction": "TID: TXN-2023-ABCD\nDate: 2023-09-20 10:00:00\nSender:\n   Name: \"Alpha Investments Inc\"\n   Account: IBAN XX99 1234 5678 9012 3456 78 (Some Bank)\n   Address: 123 Finance St, New York, NY, USA\n   Notes: \"Investment funds transfer\"\nrvcr:\n   Name: \"Beta Capital\"\n   Account: 987654321 (Beta Bank, UK)\nAmount: $1,000,000.00 (USD)\nCurrency Exchange: N/A\nType: Wire Transfer\nReference: \"Investment Settlement - Ref #INV-2023-0920\"\nAdditional Notes:\n   \"Approval by CFO required.\"",
+    "Transaction ID": "TXN-2023-ABCD",
+    "Date": "2023-09-20 10:00:00",
+    "Amount": "1,000,000.00",
+    "Currency Exchange": "N/A\nType: Wire Transfer\nReference: \"Investment Settlement - Ref #INV-2023-0920\"\nAdditional Notes:\n   \"Approval by CFO required.\"",
+    "Transaction Type": "",
+    "Reference": "Investment Settlement - Ref #INV-2023-0920\"\nAdditional Notes:\n   \"Approval by CFO required.",
+    "Sender": {
+      "Name": null,
+      "Account": null,
+      "Jurisdiction": null,
+      "Additional Info": []
+    },
+    "Receiver": {
+      "Name": null,
+      "Account": null,
+      "Jurisdiction": null,
+      "Additional Info": []
+    },
+    "Transaction Details": {
+      "Notes": [
+        "\"Approval by CFO required.\""
+      ]
+    },
+    "Proper Noun Entities": [
+      {
+        "Entity Name": "Alpha Investments Inc",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "New York",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "NY",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "USA",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "Beta Bank",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "UK",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "CFO",
+        "Entity Type": "Organization"
+      }
+    ]
+  },
+  {
+    "Raw Transaction": "Transaction ID: TXN-2023-XYZ1\nDate: 2023-09-21 15:30:00\nSender:\n   Name: \"Gamma Trading LLC\"\n   Acct: IBAN YY88 8765 4321 0987 6543 21 (Another Bank)\n   Address: 456 Market Ave, London, UK\n   Notes: \"Payment for commodity trade\"\nReceiver:\n   Name: \"Delta Resources Ltd\"\n   Account: 123456789 (Delta Bank, UAE)\nAmt: $750,000.00 (USD)\nCurrency Exchange: N/A\nExchange Info: TodayNews\nTransaction Type: SWIFT\nRef: \"Commodity Trade Settlement - Contract #CT-2023-0921\"\nNotes:\n   \"Urgent processing required.\"",
+    "Transaction ID": "TXN-2023-XYZ1",
+    "Date": "2023-09-21 15:30:00",
+    "Amount": "",
+    "Currency Exchange": "N/A\nExchange Info: TodayNews\nTransaction Type: SWIFT\nRef: \"Commodity Trade Settlement - Contract #CT-2023-0921\"\nNotes:\n   \"Urgent processing required.\"",
+    "Transaction Type": "SWIFT\nRef: \"Commodity Trade Settlement - Contract #CT-2023-0921\"\nNotes:\n   \"Urgent processing required.\"",
+    "Reference": "",
+    "Sender": {
+      "Name": null,
+      "Account": null,
+      "Jurisdiction": null,
+      "Additional Info": []
+    },
+    "Receiver": {
+      "Name": null,
+      "Account": null,
+      "Jurisdiction": null,
+      "Additional Info": []
+    },
+    "Transaction Details": {
+      "Notes": []
+    },
+    "Proper Noun Entities": [
+      {
+        "Entity Name": "TXN-2023-XYZ1\n",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "IBAN",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "Market Ave",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "London",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "UK",
+        "Entity Type": "Jurisdiction"
+      },
+      {
+        "Entity Name": "Delta Resources Ltd",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "Delta Bank, UAE",
+        "Entity Type": "Organization"
+      },
+      {
+        "Entity Name": "TodayNews",
+        "Entity Type": "Organization"
+      }
+    ]
+  }
+]

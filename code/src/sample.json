@@ -1,0 +1,31 @@
+{"transaction":[
+    {
+        "transactionId": "TXN001",
+        "extractedEntities": ["Acme Corporation", "Sovco Capital Partners"],
+        "entityTypes": ["Corporation", "Corporation"],
+        "riskScore": 0.35,
+        "supportingEvidence": ["OpenCorporates", "Company Website"],
+        "confidenceScore": 0.95,
+        "reason":
+            "SovCo Capital Partners is not on the sanctions list but is an entity of interest. It is owned by Russian businessmen and related to Socombank PJSC, a sanctioned entity."
+    },
+    {
+        "transactionId": "TXN002",
+        "extractedEntities": ["XYZ Holdings", "Global Bank Ltd"],
+        "entityTypes": ["Holding", "Bank"],
+        "riskScore": 0.72,
+        "supportingEvidence": ["Financial Reports", "Banking Records"],
+        "confidenceScore": 0.87,
+        "reason":
+            "XYZ Holdings has been flagged in multiple fraud reports and is under investigation for money laundering."
+    },
+    {
+        "transactionId": "TXN003",
+        "extractedEntities": ["Tech Ventures Inc.", "Credit Solutions"],
+        "entityTypes": ["Tech Company", "Credit Agency"],
+        "riskScore": 0.12,
+        "supportingEvidence": ["Government Registrations", "Financial Reports"],
+        "confidenceScore": 0.98,
+        "reason": "No negative indicators found. The transaction appears to be low risk."
+    }
+]}

@@ -1,18 +1,22 @@
-from flask import make_response
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
+from flask_cors import CORS
+from dotenv import load_dotenv
 import os
 import json
 import logging
 from typing import Dict, List
-from processStructured import process_structured_transactions
-from processUnstructured import process_unstructured_transactions, read_unstructured_file
-from flask_cors import CORS
-
+from processors.processStructured import process_structured_transactions
+from processors.processUnstructured import process_unstructured_transactions, read_unstructured_file
+from risk_entry import risk_entry
 # --- Configure Logging ---
 logging.basicConfig(level=logging.INFO,
                     format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
+# Load environment variables
+load_dotenv()
+
+# Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
@@ -39,6 +43,14 @@ def process_transactions(input_file_path: str) -> List[Dict]:
     except Exception as e:
         logger.error(f"Error processing file: {str(e)}")
         return []
+
+
+@app.route('/')
+def home():
+    return jsonify({
+        "message": "Flask application is running successfully!",
+        "status": "ok"
+    })
 
 
 @app.route('/upload', methods=['POST'])
@@ -78,7 +90,10 @@ def upload_file():
                 json.dump(processed_data, f, indent=2)
             logger.info(f"Processed transactions saved to {output_file_path}")
             print(processed_data)
-            return jsonify({"message": "File processed successfully", "output_json": processed_data}), 200
+            risk_stuff = risk_entry()
+            response = {}
+            response["transaction"] = risk_stuff
+            return jsonify({"message": "File processed successfully", "output_json": response}), 200
         except IOError as e:
             logger.error(f"Failed to write output file: {str(e)}")
             return jsonify({"error": "Failed to write output"}), 500
@@ -89,4 +104,4 @@ def upload_file():
 
 if __name__ == "__main__":
     # Allow external access if needed
-    app.run(host='0.0.0.0', port=8002, debug=True)
+    app.run(host='0.0.0.0', port=8002, debug=True) 
