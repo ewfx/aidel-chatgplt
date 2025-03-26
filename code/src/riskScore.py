@@ -49,6 +49,9 @@ def set_fatf(risk_details, country1, country2, intermediary):
         country2: Second country name
         intermediary: Intermediary country name
     """
+    country1 = country1.lower() if country1 else ""
+    country2 = country2.lower() if country2 else ""
+    intermediary = intermediary.lower() if intermediary else ""
     for element in fatf_black:
         if country1.lower() == element.lower():
             risk_details.curr_fatf_e1 = 1
@@ -75,6 +78,9 @@ def set_fatf_hist(risk_details, country1, country2, intermediary):
         country2: Second country name
         intermediary: Intermediary country name
     """
+    country1 = country1.lower() if country1 else ""
+    country2 = country2.lower() if country2 else ""
+    intermediary = intermediary.lower() if intermediary else ""
     for element in fatf_black_2024:
         if country1.lower() == element.lower():
             risk_details.hist_fatf_e1 = 1

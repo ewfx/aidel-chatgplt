@@ -50,6 +50,7 @@ class Transaction:
         entities = []
         jurisdictions = []
         entities_section = transaction.get('Proper Noun Entities', [])
+        
         for entity in entities_section:
             if entity.get('Entity Type') == 'Person':
                 persons.append(entity['Entity Name'])
@@ -57,6 +58,8 @@ class Transaction:
                 entities.append(entity['Entity Name'])
             elif entity.get('Entity Type') == 'Jurisdiction':
                 jurisdictions.append(entity['Entity Name'])
+        country_intermediary = None  
+        e_intermediary = None
         for jurisdiction in jurisdictions:
             if jurisdiction!=sender.get('Jurisdiction', '') and jurisdiction!=receiver.get('Jurisdiction', ''):
                 country_intermediary = jurisdiction
@@ -69,10 +72,10 @@ class Transaction:
         return cls(
             country1=country_llm['sender_country'] or sender.get('Jurisdiction', ''),
             country2=country_llm['reciever_country'] or receiver.get('Jurisdiction', ''),
-            intermediary=country_intermediary,
+            intermediary=country_intermediary or "",
             e1=sender.get('Name', ''),
             e2=receiver.get('Name', ''),
-            e_intermediary=e_intermediary,
+            e_intermediary=e_intermediary or "",
             persons=persons,
             entities=entities,
             jurisdictions=jurisdictions,
