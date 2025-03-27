@@ -17,7 +17,7 @@ This project is designed to process transaction data, analyze risks, and identif
 - **Python Notebook**: Used to find the person of interest, located in the `notebooks` directory.
 - **LLM Models**: OpenAI GPT-4-mini (entity extrcation and research agent), Gemini-2.0-flash (RAG search), llama-3.3-70b-versatile (Risk Reasoning)
 
-[Sample research output](artifacts\research_output_by_agent\output1.md)
+[Agent research output](https://github.com/ewfx/aidel-chatgplt/blob/main/artifacts/research_output_by_agent/output1.md)
 
 ## Getting Started
 
