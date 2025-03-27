@@ -15,7 +15,9 @@ This project is designed to process transaction data, analyze risks, and identif
 - **Flask Backend**: Processes transaction data and performs risk analysis.
 - **UI**: Located in the `HACK UI` folder, providing a user-friendly interface.
 - **Python Notebook**: Used to find the person of interest, located in the `notebooks` directory.
-- **LLM Models**: OpenAI GPT-4-mini (entity extrcation), Gemini-2.0-flash (RAG search), llama-3.3-70b-versatile (Risk Reasoning)
+- **LLM Models**: OpenAI GPT-4-mini (entity extrcation and research agent), Gemini-2.0-flash (RAG search), llama-3.3-70b-versatile (Risk Reasoning)
+
+[Sample research output](artifacts\research_output_by_agent\output1.md)
 
 ## Getting Started
 
