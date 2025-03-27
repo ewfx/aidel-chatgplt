@@ -83,6 +83,7 @@ This project is designed to process transaction data, analyze risks, and identif
 - The Colab notebook is used for resource-intensive code and is preferred for headless scraping.
 - Run all the cells in the os_scrape.ipynb in Google Colab , which is a flask app, copy the url from there and replace the url in persons_norm() and entities_norm()<br><br>
 (Inorder to improve the performance of the application, we leveraged Google collab and its compute power and that is why a separate flask app here)
+- Use our Google Colab Notebook for easy setup instead of local setup: https://colab.research.google.com/drive/1c0tB3Uq0fIuM8iw5voHSKHWO6SdgwSbm?usp=sharing
 
 ## Team
 
