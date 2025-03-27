@@ -24,6 +24,3 @@ Limited specific information regarding legal sanctions or associations with poli
 1. [Acme United Corporation - Wikipedia](https://en.wikipedia.org/wiki/Acme_United_Corporation)
 2. [The Story Behind Acme, the Brand That Never Existed - Adweek](https://www.adweek.com/brand-marketing/how-warner-bros-built-a-fake-brand-that-lives-beyond-the-cartoon-world/)
 3. [Acme United Corporation Official Website](https://acmeunited.com/)
-
-
-fake entity ka aisa research aata h
