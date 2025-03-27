@@ -4,6 +4,8 @@ Welcome to our submission for the AIDEL Hackathon! We are Team Chatgplt, and thi
 
 <img width="1256" alt="Image" src="https://github.com/user-attachments/assets/8b503ae0-bf94-4cc0-bd26-94089e1fc318" />
 
+[Watch the Demo Video on YouTube](https://youtu.be/Ayy3oX778Nk)
+
 ## Project Overview
 
 This project is designed to process transaction data, analyze risks, and identify entities of interest using AI techniques. The solution includes a Flask application for backend processing and a UI located in the `HACK UI` folder.
